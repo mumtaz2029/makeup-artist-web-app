@@ -1002,6 +1002,7 @@ p {
     opacity: 1;
     pointer-events: auto;
     transform: none;
+    visibility: visible;
   }
 
   .hero-grid,
