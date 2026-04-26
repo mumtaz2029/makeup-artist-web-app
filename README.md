@@ -7,7 +7,7 @@ A premium, fully responsive static website for **Sania Mulla**, a professional b
 ##  Live Demo
 
 The site is deployed on Netlify.
-*URL : https://sania-mulla-makeup.netlify.app/*
+*URL : https://sania-mulla-makeupartist.netlify.app/ *
 
 ---
 
