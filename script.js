@@ -7,7 +7,6 @@ const navAnchors = document.querySelectorAll(
 const toast = document.getElementById("toast");
 const form = document.querySelector(".contact-form");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
 
 function updateHeaderState() {
   if (window.scrollY > 30) {
@@ -97,7 +96,7 @@ const counterObserver = new IntersectionObserver(
 counters.forEach((counter) => counterObserver.observe(counter));
 
 function applyTiltEffect(element, rotationLimit = 14) {
-  if (prefersReducedMotion || isTouchDevice) {
+  if (prefersReducedMotion) {
     return;
   }
 
@@ -123,7 +122,7 @@ const canvas = document.getElementById("hero-particles");
 if (canvas) {
   const context = canvas.getContext("2d");
   const particles = [];
-  const particleCount = isTouchDevice ? 42 : 80;
+  const particleCount = 80;
 
   function resizeCanvas() {
     canvas.width = canvas.offsetWidth;
