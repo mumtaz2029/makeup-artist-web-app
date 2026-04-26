@@ -1,9 +1,13 @@
 const header = document.querySelector(".site-header");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
-const navAnchors = document.querySelectorAll('.nav-links a[href^="#"], .brand[href^="#"], .button-secondary[href^="#"], .scroll-indicator');
+const navAnchors = document.querySelectorAll(
+  '.nav-links a[href^="#"], .brand[href^="#"], .button-secondary[href^="#"], .scroll-indicator'
+);
 const toast = document.getElementById("toast");
 const form = document.querySelector(".contact-form");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
 
 function updateHeaderState() {
   if (window.scrollY > 30) {
@@ -21,6 +25,7 @@ if (navToggle && navLinks) {
     const isOpen = navLinks.classList.toggle("open");
     navToggle.classList.toggle("active", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("nav-open", isOpen);
   });
 
   navAnchors.forEach((anchor) => {
@@ -28,6 +33,7 @@ if (navToggle && navLinks) {
       navLinks.classList.remove("open");
       navToggle.classList.remove("active");
       navToggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-open");
     });
   });
 }
@@ -38,7 +44,9 @@ const revealObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
 
-      const siblings = [...entry.target.parentElement.children].filter((child) => child.classList.contains("reveal"));
+      const siblings = [...entry.target.parentElement.children].filter((child) =>
+        child.classList.contains("reveal")
+      );
       const index = siblings.indexOf(entry.target);
       entry.target.style.transitionDelay = `${Math.max(index, 0) * 120}ms`;
       entry.target.classList.add("visible");
@@ -89,6 +97,10 @@ const counterObserver = new IntersectionObserver(
 counters.forEach((counter) => counterObserver.observe(counter));
 
 function applyTiltEffect(element, rotationLimit = 14) {
+  if (prefersReducedMotion || isTouchDevice) {
+    return;
+  }
+
   element.addEventListener("mousemove", (event) => {
     const rect = element.getBoundingClientRect();
     const offsetX = event.clientX - rect.left;
@@ -111,7 +123,7 @@ const canvas = document.getElementById("hero-particles");
 if (canvas) {
   const context = canvas.getContext("2d");
   const particles = [];
-  const particleCount = 80;
+  const particleCount = isTouchDevice ? 42 : 80;
 
   function resizeCanvas() {
     canvas.width = canvas.offsetWidth;
@@ -159,7 +171,10 @@ if (canvas) {
 
   resizeCanvas();
   createParticles();
-  drawParticles();
+
+  if (!prefersReducedMotion) {
+    drawParticles();
+  }
 
   window.addEventListener("resize", () => {
     resizeCanvas();
@@ -189,7 +204,7 @@ if (form && toast) {
         toast.classList.add("show");
         window.setTimeout(() => {
           toast.classList.remove("show");
-          toast.textContent = "Thank you! Sania will reach out soon ✨";
+          toast.textContent = "Thank you! Sania will reach out soon.";
         }, 3200);
       });
   });

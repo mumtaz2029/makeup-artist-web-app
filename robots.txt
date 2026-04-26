@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sania-mulla-makeup.netlify.app/sitemap.xml
