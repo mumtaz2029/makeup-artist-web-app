@@ -75,7 +75,7 @@ makeup-artist-web-app/
 
 
 
-## 📬 Contact Form Setup
+##  Contact Form Setup
 
 The contact form is set up for **Netlify Forms**. Ensure the form has the attribute `data-netlify="true"`. Submissions will appear in the Netlify dashboard under **Forms** once deployed.
 
@@ -88,7 +88,7 @@ The contact form is set up for **Netlify Forms**. Ensure the form has the attrib
 
 ---
 
-## 📄 License
+##  License
 
 This project is proprietary. All rights reserved. The source code and designs are not open for reuse or redistribution without permission.
 
