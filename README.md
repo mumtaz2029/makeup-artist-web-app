@@ -10,7 +10,7 @@ The site is deployed on Netlify.
 
 ---
 
-## 📸 Preview
+## Preview
 
 - **Hero Section**: Full-screen particles canvas with glitter text and a 3D tilt card.
 - **Gallery**: Infinite marquee showcasing bridal makeup work.
