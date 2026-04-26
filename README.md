@@ -4,7 +4,7 @@ A premium, fully responsive static website for **Sania Mulla**, a professional b
 
 ---
 
-## 🌐 Live Demo
+##  Live Demo
 
 The site is deployed on Netlify.
 
@@ -19,7 +19,7 @@ The site is deployed on Netlify.
 
 ---
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 | Technology | Purpose                        |
 |------------|-------------------------------|
@@ -30,22 +30,22 @@ The site is deployed on Netlify.
 
 ---
 
-## ✨ Features
+##  Features
 
-- ✅ **Responsive Design** — Fully fluid from mobile to desktop.
-- ✅ **Hero Particles Canvas** — Lightweight custom particle system on the hero section.
-- ✅ **Scroll Reveal Animations** — Elements fade/slide into view using `IntersectionObserver`.
-- ✅ **3D Tilt Cards** — Interactive hover tilt effect on hero and service cards.
-- ✅ **Flip Card** — Hover-to-flip about card revealing experience stats.
-- ✅ **Infinite Marquee Gallery** — Auto-scrolling image gallery with pause-on-hover.
-- ✅ **Netlify Contact Form** — Spam-protected with honeypot field.
-- ✅ **Floating WhatsApp Button** — Persistent CTA to start a WhatsApp conversation.
-- ✅ **Smooth Scroll Navigation** — Sticky header with active states.
-- ✅ **Accessibility** — ARIA labels, reduced motion support, semantic HTML.
+-  **Responsive Design** — Fully fluid from mobile to desktop.
+-  **Hero Particles Canvas** — Lightweight custom particle system on the hero section.
+-  **Scroll Reveal Animations** — Elements fade/slide into view using `IntersectionObserver`.
+-  **3D Tilt Cards** — Interactive hover tilt effect on hero and service cards.
+-  **Flip Card** — Hover-to-flip about card revealing experience stats.
+-  **Infinite Marquee Gallery** — Auto-scrolling image gallery with pause-on-hover.
+-  **Netlify Contact Form** — Spam-protected with honeypot field.
+-  **Floating WhatsApp Button** — Persistent CTA to start a WhatsApp conversation.
+-  **Smooth Scroll Navigation** — Sticky header with active states.
+-  **Accessibility** — ARIA labels, reduced motion support, semantic HTML.
 
 ---
 
-## 📁 File Structure
+##  File Structure
 
 ```
 makeup-artist-web-app/
@@ -81,7 +81,7 @@ The contact form is set up for **Netlify Forms**. Ensure the form has the attrib
 
 ---
 
-## 🧑‍💻 Credits
+##  Credits
 
 - **Design & Development:** [Mumtaz](https://github.com/mumtaz2029)
 - **Client:** Sania Mulla — Bridal Makeup Artist & Educator, Bijapur
@@ -94,5 +94,5 @@ This project is proprietary. All rights reserved. The source code and designs ar
 
 ---
 
-<p align="center">Crafted with 💄✨ for Sania Mulla</p>
+<p align="center">Crafted with  for Sania Mulla</p>
 
