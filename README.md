@@ -73,19 +73,7 @@ makeup-artist-web-app/
 
 ---
 
-## 🛠 Getting Started
 
-To run the project locally, simply clone the repository and open `index.html` in your browser:
-
-```bash
-git clone https://github.com/mumtaz2029/makeup-artist-web-app.git
-cd makeup-artist-web-app
-# Open index.html in your browser
-```
-
-No build step or dependencies are required.
-
----
 
 ## 📬 Contact Form Setup
 
