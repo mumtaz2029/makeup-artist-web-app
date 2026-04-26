@@ -346,7 +346,6 @@ p {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(212, 175, 55, 0.18);
   box-shadow: var(--shadow-glow);
-  animation: cardFloat 5s ease-in-out infinite;
 }
 
 .hero-card::after {
@@ -406,16 +405,6 @@ p {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes cardFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
   }
 }
 
