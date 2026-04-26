@@ -249,6 +249,13 @@ p {
 
 .nav-links a {
   font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--color-accent);
+  text-shadow: 0 0 18px rgba(212, 175, 55, 0.45);
 }
 
 .hero-section {
@@ -291,6 +298,15 @@ p {
 
 .hero-description {
   max-width: 38rem;
+}
+
+.hero-quote {
+  max-width: 34rem;
+  margin-bottom: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.25;
+  color: rgba(250, 240, 230, 0.92);
 }
 
 .hero-actions {
@@ -475,6 +491,10 @@ p {
   margin-top: 2rem;
 }
 
+.stats-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .stat-card,
 .service-card,
 .contact-card,
@@ -503,6 +523,30 @@ p {
   color: var(--color-muted);
 }
 
+.about-highlight,
+.service-line {
+  color: rgba(250, 240, 230, 0.92);
+}
+
+.about-highlight {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.45rem;
+  line-height: 1.35;
+}
+
+.mini-quote-card {
+  margin-top: 1.5rem;
+  padding: 1.2rem 1.3rem;
+  border-left: 3px solid rgba(212, 175, 55, 0.55);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.mini-quote-card p {
+  margin: 0;
+  color: rgba(250, 240, 230, 0.86);
+}
+
 .section-heading {
   padding: 1.5rem;
   border-radius: var(--radius-md);
@@ -523,6 +567,11 @@ p {
 .service-card:hover {
   border-color: rgba(183, 110, 121, 0.6);
   box-shadow: 0 0 0 1px rgba(183, 110, 121, 0.2), 0 24px 60px rgba(183, 110, 121, 0.24);
+}
+
+.service-line {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
 }
 
 .service-icon {
@@ -606,7 +655,16 @@ p {
 }
 
 .contact-card span {
-  font-size: 1.35rem;
+  min-width: 56px;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .contact-card strong {
@@ -776,6 +834,10 @@ p {
 
   .stats-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .stats-grid-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .services-grid {
